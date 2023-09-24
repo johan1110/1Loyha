@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(230, 222, 222);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.7s;
+}
+
+nav ul a:hover {
+    background-color: rgb(139, 138, 138);
+    color: #fff;
+}
+
+
+.nav__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .hamburger {
+    display: none;
+}
+
+section {
+    width: 100%;
+    background-color: tan;
+    pad: 1.5rem;
+}
+
+section .section__wraper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    transition-duration: 1s;
+}
+
+.section__wraper .card {
+    width: 23%;
+    box-shadow: 0 0 8 grey;
+    background-color: gainsboro;
+    border-radius: 8px;
+    transition-duration: 1s;
+}
+
+.section__wraper .card:hover {
+    transform: translateY(-15px);
+}
+
+section .section__wraper .card .text {
+    padding: 1rem;
+    text-align: center;
+}
+
+section .section__wraper .card .text h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+section .section__wraper .card .text p {
+    font-family: cursive;
+}
+
+section .section__wraper .card .card__img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+section .section__wraper .card .card__img img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    transition-duration: 1s;
+}
+
+section .section__wraper .card .card__img img:hover {
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width:1090px) {
+    nav .list__item {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: flex;
+        font-size: 25px;
+    }
+
+    section .section__wraper .card {
+        width: 30%;
+    }
+
+}
+
+@media only screen and (max-width:850px) {
+    section .section__wraper .card {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    section .section__wraper .card {
+        width: 100%;
+    }
+}
